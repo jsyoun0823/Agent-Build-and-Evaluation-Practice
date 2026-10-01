@@ -14,7 +14,7 @@
 
    <img src="docs/images/codespaces/step02-codespace-ready.png" alt="Codespace의 VS Code 화면: 탐색기, 터미널, Codespaces 연결 표시" width="760">
 
-3. 왼쪽 탐색기에서 `.env.example`을 복제해 `.env`로 이름을 바꿉니다. `.env`를 열고 `OPENAI_API_KEY`에 OpenRouter API 키를 입력한 뒤 저장합니다.
+3. 왼쪽 탐색기에서 `.env.example`을 복제해 `.env`로 이름을 바꿉니다. `.env`를 열고 `OPENAI_API_KEY`에 OpenRouter API 키를 입력합니다. LangSmith에서 trace를 보려면 `LANGSMITH_API_KEY`에도 LangSmith API 키를 입력하고 `LANGSMITH_TRACING=true`인지 확인한 뒤 저장합니다. 기본 프로젝트 이름은 `agent-build-and-evaluation-practice`이며 `LANGSMITH_PROJECT`로 바꿀 수 있습니다.
 
    <img src="docs/images/codespaces/step03-env-file.png" alt=".env 파일을 만들고 OPENAI_API_KEY에 OpenRouter API 키 입력" width="760">
 
@@ -63,4 +63,4 @@
 
 ## 필수 설정
 
-`.env`의 `OPENAI_API_KEY`는 필수입니다. Tavily, Slack, Telegram, 이메일 연동은 해당 기능을 사용할 때만 각 키와 설정을 추가하면 됩니다. 자세한 환경변수 목록은 [`.env.example`](.env.example)을 참고하세요.
+`.env`의 `OPENAI_API_KEY`는 필수입니다. LangSmith trace 전송은 `LANGSMITH_TRACING=true`와 `LANGSMITH_API_KEY`가 설정된 경우 활성화되며, LangSmith의 해당 프로젝트 Traces 화면에서 확인할 수 있습니다. Tavily, Slack, Telegram, 이메일 연동은 해당 기능을 사용할 때만 각 키와 설정을 추가하면 됩니다. 자세한 환경변수 목록은 [`.env.example`](.env.example)을 참고하세요.
